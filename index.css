@@ -1,0 +1,57 @@
+/*
+Error: Invalid CSS after "": expected selector, was "<!DOCTYPE html>"
+        on line 1 of index.html
+
+1: <!DOCTYPE html>
+2: <html lang="en">
+3: 
+4: <head>
+5:   <title>Brad Garner Web Developer</title>
+6:   <meta charset="utf-8">
+
+Backtrace:
+index.html:1
+/Users/bradgarner/.gem/ruby/2.0.0/gems/sass-3.5.1/lib/sass/scss/parser.rb:1278:in `expected'
+/Users/bradgarner/.gem/ruby/2.0.0/gems/sass-3.5.1/lib/sass/scss/parser.rb:1208:in `expected'
+/Users/bradgarner/.gem/ruby/2.0.0/gems/sass-3.5.1/lib/sass/scss/parser.rb:1188:in `expr!'
+/Users/bradgarner/.gem/ruby/2.0.0/gems/sass-3.5.1/lib/sass/scss/static_parser.rb:20:in `parse_selector'
+/Users/bradgarner/.gem/ruby/2.0.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:438:in `visit_rule'
+/Users/bradgarner/.gem/ruby/2.0.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/bradgarner/.gem/ruby/2.0.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Users/bradgarner/.gem/ruby/2.0.0/gems/sass-3.5.1/lib/sass/stack.rb:79:in `block in with_base'
+/Users/bradgarner/.gem/ruby/2.0.0/gems/sass-3.5.1/lib/sass/stack.rb:135:in `with_frame'
+/Users/bradgarner/.gem/ruby/2.0.0/gems/sass-3.5.1/lib/sass/stack.rb:79:in `with_base'
+/Users/bradgarner/.gem/ruby/2.0.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Users/bradgarner/.gem/ruby/2.0.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/bradgarner/.gem/ruby/2.0.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/bradgarner/.gem/ruby/2.0.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/bradgarner/.gem/ruby/2.0.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+/Users/bradgarner/.gem/ruby/2.0.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/Users/bradgarner/.gem/ruby/2.0.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+/Users/bradgarner/.gem/ruby/2.0.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/bradgarner/.gem/ruby/2.0.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+/Users/bradgarner/.gem/ruby/2.0.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/bradgarner/.gem/ruby/2.0.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:161:in `visit'
+/Users/bradgarner/.gem/ruby/2.0.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:10:in `visit'
+/Users/bradgarner/.gem/ruby/2.0.0/gems/sass-3.5.1/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/bradgarner/.gem/ruby/2.0.0/gems/sass-3.5.1/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Users/bradgarner/.gem/ruby/2.0.0/gems/sass-3.5.1/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/Users/bradgarner/.gem/ruby/2.0.0/gems/sass-3.5.1/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/Users/bradgarner/.gem/ruby/2.0.0/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+/Users/bradgarner/.gem/ruby/2.0.0/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Users/bradgarner/.gem/ruby/2.0.0/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:209:in `each'
+/Users/bradgarner/.gem/ruby/2.0.0/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Users/bradgarner/.gem/ruby/2.0.0/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:294:in `watch'
+/Users/bradgarner/.gem/ruby/2.0.0/gems/sass-3.5.1/lib/sass/plugin.rb:109:in `method_missing'
+/Users/bradgarner/.gem/ruby/2.0.0/gems/sass-3.5.1/lib/sass/exec/sass_scss.rb:360:in `watch_or_update'
+/Users/bradgarner/.gem/ruby/2.0.0/gems/sass-3.5.1/lib/sass/exec/sass_scss.rb:51:in `process_result'
+/Users/bradgarner/.gem/ruby/2.0.0/gems/sass-3.5.1/lib/sass/exec/base.rb:52:in `parse'
+/Users/bradgarner/.gem/ruby/2.0.0/gems/sass-3.5.1/lib/sass/exec/base.rb:19:in `parse!'
+/Users/bradgarner/.gem/ruby/2.0.0/gems/sass-3.5.1/bin/sass:13:in `<top (required)>'
+/usr/local/bin/sass:23:in `load'
+/usr/local/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"\": expected selector, was \"<!DOCTYPE html>\"\A         on line 1 of index.html\A \A 1: <!DOCTYPE html>\A 2: <html lang=\"en\">\A 3: \A 4: <head>\A 5:   <title>Brad Garner Web Developer</title>\A 6:   <meta charset=\"utf-8\">"; }

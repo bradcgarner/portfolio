@@ -1,0 +1,673 @@
+// @@@@@@@@@@@@ VARIABLES @@@@@@@@@@@@
+
+$accent: #599cc5; // #6c4529
+$aboutHover: #5a9fc7; // >7 contrast over black 
+$taglineColor: #5a9fc7;
+$darkGray: #111;
+$lightGray: #ccc; 
+$black: black;
+$white: white;
+$lines: #aaa;
+$shadow: #666;
+$linkHover: #3e7696;
+$accentLight: #c8dbe6; // >8 contrast over black
+$socialHover: #3e7696;
+$projectMoreHoverColor: lighten($accent,15%);
+$projectMoreColor: #0e3247; // >8 contrast over white
+
+$headshotWidth: 165px; // 165px aligns nicely with right of phone, which is 200px (with white padding);
+
+$portraitPhoneWide: 375px;
+$landscapePhone: 576px;
+$portraitTablet: 768px;
+$landscapeTablet: 992px;
+$laptopPlus: 1200px;
+
+// @@@@@@@@@@@@ RESET @@@@@@@@@@@@@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	// font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: flex; // was block
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a { // by brad
+  color: inherit; 
+  text-decoration: none;
+}
+a:hover{ // by brad
+  text-decoration: underline;
+  color: $linkHover;
+}
+* {
+  box-sizing: border-box; // by brad
+}
+
+// @@@@@@@@@ END RESET @@@@@@@@@@
+// @@@@@@@@@ TYPOGRAPHY @@@@@@@@@
+
+* {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;  
+}
+
+@mixin linear-gradient($deg,$start, $end) {
+  background: $start; /* For browsers that do not support gradients */        
+  background: -webkit-linear-gradient($deg,$start,$end); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient($deg, $start, $end); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient($deg, $start, $end); /* For Firefox 3.6 to 15 */
+  background: linear-gradient($deg, $start, $end); /* Standard syntax (must be last) */
+}
+
+$slide-speed: 1s;
+@mixin slide {
+	-webkit-transition: $slide-speed;
+	-moz-transition: $slide-speed;
+	-ms-transition: $slide-speed;
+	-o-transition: $slide-speed;
+	transition: $slide-speed;
+}
+
+// @@@@@@@@@@@@@@@ GENERAL @@@@@@@@@@@@@@@@
+
+
+.fullwidth {
+  max-width: 960px;
+  margin: 0;
+}
+
+main {
+  background-color: $white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@
+
+.floating {
+  flex: 1;
+  border: 1px solid $lines;
+  img {
+    width: 100%;
+  }
+}
+
+$shadowLength: 9px;
+.floating, .phoneShadow {
+  -moz-box-shadow: $shadowLength $shadowLength $shadowLength -3px $shadow;
+  -webkit-box-shadow: $shadowLength $shadowLength $shadowLength -3px $shadow;
+  box-shadow: $shadowLength $shadowLength $shadowLength -3px $shadow;
+}
+
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@
+
+.tooltip {
+	position: relative;
+	display: flex;
+}
+.tooltipText {
+	display: none;
+	position: absolute;
+	height: 230%;
+	top: 100%;
+	right: 50%;
+	border-radius: 10px 0 10px 10px;
+	background-color: white;
+	opacity: .95;
+	border: 1px solid #444;
+	margin: 0;
+	font-size: 75%;
+	z-index: 2;
+	padding: 0 5px;
+}
+.tooltipText p {
+	margin: 0;
+	text-align: right;		
+}
+.tooltip:hover .tooltipText {
+	display: none; // change to flex if we want to enable them
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+// @@@@@@@@@@@@@@@
+
+.stackContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.stackCenter {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: $white;
+  width: 75%; // of 300... less 80 on each side & 10 buffer to fit popovers
+  // @media (min-width: $portraitPhoneWide) {
+  //   width: 64%; // of 90% of 375 = 337.5 total = 37.5 margin, need 170, so 122.5 deficit, so 36% more.
+  // }
+  @media (min-width: $landscapePhone) {
+    width: 89%; // of 90% of 576 = 518.4 total = 57.6 margin, need 170, so 54.8 deficit, so 11% more. 
+  }
+  @media (min-width: $portraitTablet) {
+    width: 92%; // of 85% of 768 = 652.8 total = 115.2 margin, need 170, so 55 deficit, so 8% more.
+  }
+  @media (min-width: $landscapeTablet) {
+    width: 100%; // of 82% of 992 = 813 total = 179 margin, need 170, so 100%.
+  }
+}
+
+.stackIcon {  
+  height: 50px;
+  margin-left: 3px;
+  margin-right: 3px;
+  padding-bottom: 2px; // compensate for border on hover
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  img {
+    width: 100%;
+    max-height: 100%;
+  }
+  width: 30px;
+  &:hover {
+    padding-bottom: 0;
+    border-bottom: 2px solid $lines;
+    .stackToolTip {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  }
+}
+
+.stackToolTip {
+  display: none;
+  position: absolute;
+  bottom: 50px;
+  height: 135px;
+  margin-top: -50%;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: $white;
+  border: 1px solid $lines;
+  -moz-box-shadow: 4px 4px 4px -3px $shadow;
+  -webkit-box-shadow: 4px 4px 4px -3px $shadow;
+  box-shadow: 4px 4px 4px -3px $shadow;
+  z-index: 999;
+  left: 50%;
+  margin-left: -90px;
+  width: 150px;
+  @media (min-width: $landscapePhone) {
+    left: 50%;
+    margin-left: -95px;
+    width: 160px;
+  }
+  h4 {
+    font-size: 14px;
+  }
+  p {
+    font-size: 12px;
+    margin-top: 10px;
+  }
+  a {
+    text-decoration: underline;
+  }
+}
+
+.stackToolTip:after, .stackToolTip:before {
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+  pointer-events: none;
+}
+
+.stackToolTip:after {
+	border-top-color: $white;
+	border-width: 10px;
+	margin-left: -10px;
+}
+.stackToolTip:before {
+	border-top-color: black;
+	border-width: 10px;
+	margin-left: -10px;
+}
+
+// @@@@@@@@@@@@@@@@@
+
+.blackBackground {
+  @include linear-gradient(110deg, lighten($darkGray, 10%), darken($darkGray, 10%));
+  color: $white;  
+}
+
+// @@@@@@@@@@@@@@@ ELEMENTS FROM TOP TO BOTTOM OF PAGE @@@@@@@@@@@@@@@@
+
+header, footer {
+  flex-direction: column;  
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  h1 {
+    font-size: 36px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  h3 { // .tagline
+    font-size: 24px;
+    font-style: italic;
+    margin-bottom: 10px;
+    color: $taglineColor;
+  }
+}
+.headerName {
+  letter-spacing: 3px;  
+}
+
+.headerContainer, .footerContainer {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px;
+  @media (min-width: $portraitPhoneWide) {
+    width: 90%
+  }
+  @media (min-width: $landscapePhone) {
+    flex-direction: row;
+  }
+  @media (min-width: $portraitTablet) {
+    width: 85%;
+  }
+  @media (min-width: $landscapeTablet) {
+    width: 82%;
+  }
+  @media (min-width: $laptopPlus) {
+    width: 80%;
+  }
+}
+  
+.headerText {
+  display: flex;
+  flex-direction: column;
+}
+
+.socialContainer { // socialTop, socialBottom
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 165px; // 30x4 + 15x3
+  svg {
+    fill: $white;
+    width: 30px;
+    height: 30px;
+    &:hover {
+      fill: $socialHover;
+      // fill: lighten($accent,15%);
+    }
+  }
+}
+.accentBanner { // two places: bottom of header, top of footer
+  @include linear-gradient(110deg, lighten($accent, 30%), darken($accent, 10%));
+  height: 15px;
+  width: 100%;
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@
+
+.about {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+}
+
+.aboutContainer {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  @media (min-width: $portraitPhoneWide) {
+    width: 90%
+  }
+  @media (min-width: $landscapePhone) {
+  }
+  @media (min-width: $portraitTablet) {
+    width: 85%;
+  }
+  @media (min-width: $landscapeTablet) {
+    width: 82%;
+    flex-direction: row;    
+  }
+  @media (min-width: $laptopPlus) {
+    width: 80%;
+  }
+}
+
+.headshotContainer {
+  width: $headshotWidth;
+  flex-shrink: 0;
+  margin-top: 25px;
+  img { 
+    width: 100%;
+    height: auto;
+    background-color: $lightGray;
+  }
+}
+// @@@@@@@@@@@@@@@@@@@@@@ ABOUT @@@@@@@@@@@
+
+.aboutContent {
+  flex-direction: column; 
+  flex: 1; 
+  padding-bottom: 20px;
+  @media (min-width: $landscapeTablet) {
+    margin-left: 20px;
+  }
+}
+
+.aboutHeader {
+  margin-top: 20px; // same on headshot
+  padding: 5px;
+  &:hover {
+    color: $aboutHover;
+    .nowrap .fa-caret-down {
+        color: $aboutHover;
+    }
+  }
+}
+.aboutDetailWrapper, .projectMoreWrapper {
+  max-height: 500px;
+}
+.aboutDetail {
+  color: $accentLight;
+}
+.aboutDetail, .projectMoreDetail {
+  padding: 5px;
+  line-height: 1.3em;
+  max-height: 500px;
+  overflow: none;
+}
+
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@
+
+.projectsHeader { // only once after header
+  padding-top: 30px;
+  margin-bottom: 50px;  
+  color: lighten($accentLight,20%);
+  font-size: 30px;
+  letter-spacing: 10px;
+  @media (min-width: $portraitPhoneWide) {
+    font-size: 35px;
+    letter-spacing: 12px; 
+  }
+  @media (min-width: $landscapePhone) {
+    font-size: 40px;
+    letter-spacing: 15px;    
+  }
+  @media (min-width: $portraitTablet) {
+    font-size: 45px;
+    letter-spacing: 17px; 
+  }
+  @media (min-width: $landscapeTablet) {
+    font-size: 50px;
+    letter-spacing: 20px; 
+  }
+  @media (min-width: $laptopPlus) {
+    font-size: 55px;
+    letter-spacing: 22px; 
+  }
+}
+
+.projectsHeader, .projectContainer { 
+  width: 300px;
+  @media (min-width: $portraitPhoneWide) {
+    width: 90%
+  }
+  @media (min-width: $landscapePhone) {
+  }
+  @media (min-width: $portraitTablet) {
+    width: 85%;
+  }
+  @media (min-width: $landscapeTablet) {
+    width: 82%;
+  }
+  @media (min-width: $laptopPlus) {
+    width: 80%;
+  }
+}
+.projectContainer { // article level
+  position: relative;
+  margin-bottom: 200px;
+  flex-direction: column;
+}
+
+.projectContentColumn { // all the content except stack
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.projectContentRow { // inside projectContent
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.projectContent1 {
+  flex-direction: column;  
+  align-items: center;
+  @media (min-width: $portraitTablet) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.projectTitle, .bigFont { // name of project
+  font-size: 24px;
+  margin-bottom: 15px;
+  
+}
+
+.projectMoreContainer {
+
+}
+
+.projectMoreButton{
+  padding: 5px;
+  font-size: 18px;
+  margin-top: 15px;
+  background-color: $white;
+  text-decoration-color: #ccc;
+  
+  &:hover {
+    color: $projectMoreHoverColor;
+    text-decoration: underline;
+    text-decoration-color: inherit;
+    .fa-caret-down {
+      color: $projectMoreHoverColor;      
+    }
+  }
+}
+.projectMoreDetail {
+  color: $projectMoreColor;
+}
+.projectMainCaption {
+  margin-top: 25px;
+}
+
+.phone { // contains svg
+  position: relative;
+  width: 200px;
+  height: 349.58px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.phoneScreen { // contains gif
+  position: absolute;
+  top: 55.93px; // 16%
+  left: 20px; //10%
+  z-index: 2;
+  width: 134px; //67%
+  img {
+    width: 100%;
+  }
+}
+.phoneShadow {
+  position: absolute;
+  background-color: transparent;
+  height: 318.12px; //91%
+  width: 147px; //~75%
+  top: 17px; //~5%
+  left: 17px;
+  border-radius: 20px;
+}
+
+.screen {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  img {
+    width: 100%;
+    border-radius: 7px;
+    object-fit: contain;
+  }
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: 3px;
+  @media (min-width: $portraitTablet) {
+    margin-top: 7px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+  }
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@
+
+// footer {
+//   margin-top: 200px;  
+// }
+
+.footerContainer {
+  align-items: baseline;
+}
+
+.footerTop {
+  height: 15px;
+  width: 100%;
+}
+
+// @@@@@@@@@@@@@@@ SHOW-HIDE TRANSITIONS @@@@@@@@@@@@@@@@
+
+// corresponding script is showDetail(showClass, hideClass, index)
+// apply 'collapsed' class to the outermost div that should hide
+// apply 'transitionContents' class to all inner divs that should hide
+// apply 'transition' class to anything else that should slide or change color with this transition
+
+$transitionSpeed: 0.5s;
+.transition, .transitionContents, .collapsed, svg, .fa { 
+  transition-property: all;
+  transition-duration: $transitionSpeed;
+  transition-timing-function: ease;
+}
+.collapsed {
+  max-height: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  overflow: none;
+  .transitionContents {
+    color: transparent;
+  }
+}
+
+.aboutCaret, .projectCaret {
+  padding-left: 5px;
+  color: $accentLight;
+}
+.fa-caret-up {
+  color: transparent;
+}
+
+.hidden {
+  display: none;
+}
+
+.nowrap {
+  white-space: nowrap;
+}

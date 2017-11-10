@@ -1,0 +1,25 @@
+Brittany
+I noticed on mobile (iphone 8) the arrow for the first header moves to the second line. 
+There is also a large gap between the Projects header and your first project. 
+Also did you want the images to be side by side? 
+And you might need to play with the opacity of the text in the project descriptions. When I tap on one the text on what was already open takes a little too long to fade away so I can still see it while the new text is appearing.
+
+David
+A _lot_ of space between “Projects” and the actual projects.
+No hover states for the expandable areas.
+I’m not in love with the initial expandable areas.
+Visual rhythm needs some work.
+
+Stephanie
+Maybe something on thoughts and contributions (e.g., What The CSS project, blog posts)
+Too much space to right of about
+
+Theresa
+Tech stack on mobile not working
+Better headshot
+Gifs not sized correctly on mobile
+
+Tyler
+I’d focus on giving things a little more space, 
+work on hover effects and maybe tone down the tech tooltips. 
+I do love the colors and the text variation.
