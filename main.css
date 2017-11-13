@@ -45,6 +45,7 @@ a {
   text-decoration: none; }
 
 a:hover {
+  cursor: pointer;
   text-decoration: underline;
   color: #3e7696; }
 
@@ -92,11 +93,11 @@ main {
   height: 230%;
   top: 100%;
   right: 50%;
+  margin: 0;
   border-radius: 10px 0 10px 10px;
   background-color: white;
   opacity: .95;
   border: 1px solid #444;
-  margin: 0;
   font-size: 75%;
   z-index: 2;
   padding: 0 5px; }
@@ -152,6 +153,7 @@ main {
     width: 100%;
     max-height: 100%; }
   .stackIcon:hover {
+    cursor: pointer;
     padding-bottom: 0;
     border-bottom: 2px solid #aaa; }
     .stackIcon:hover .stackToolTip {
@@ -175,12 +177,12 @@ main {
   box-shadow: 4px 4px 4px -3px #666;
   z-index: 999;
   left: 50%;
-  margin-left: -90px;
-  width: 150px; }
+  width: 150px;
+  margin-left: -75px; }
   @media (min-width: 576px) {
     .stackToolTip {
       left: 50%;
-      margin-left: -95px;
+      margin-left: -80px;
       width: 160px; } }
   .stackToolTip h4 {
     font-size: 14px; }
@@ -279,6 +281,7 @@ header, footer {
     width: 30px;
     height: 30px; }
     .socialContainer svg:hover {
+      cursor: pointer;
       fill: #3e7696; }
 
 .accentBanner {
@@ -345,7 +348,8 @@ header, footer {
   margin-top: 20px;
   padding: 5px; }
   .aboutHeader:hover {
-    color: #5a9fc7; }
+    color: #5a9fc7;
+    cursor: pointer; }
     .aboutHeader:hover .nowrap .fa-caret-down {
       color: #5a9fc7; }
 
@@ -364,7 +368,7 @@ header, footer {
 .projectsHeader {
   padding-top: 30px;
   margin-bottom: 50px;
-  color: white;
+  color: #ccc;
   font-size: 30px;
   letter-spacing: 10px; }
   @media (min-width: 375px) {
@@ -388,19 +392,19 @@ header, footer {
       font-size: 55px;
       letter-spacing: 22px; } }
 
-.projectsHeader, .projectContainer {
+.projectsHeader, .projectContainer, .moreSoon {
   width: 300px; }
   @media (min-width: 375px) {
-    .projectsHeader, .projectContainer {
+    .projectsHeader, .projectContainer, .moreSoon {
       width: 90%; } }
   @media (min-width: 768px) {
-    .projectsHeader, .projectContainer {
+    .projectsHeader, .projectContainer, .moreSoon {
       width: 85%; } }
   @media (min-width: 992px) {
-    .projectsHeader, .projectContainer {
+    .projectsHeader, .projectContainer, .moreSoon {
       width: 82%; } }
   @media (min-width: 1200px) {
-    .projectsHeader, .projectContainer {
+    .projectsHeader, .projectContainer, .moreSoon {
       width: 80%; } }
 
 .projectContainer {
@@ -439,6 +443,7 @@ header, footer {
   background-color: white;
   text-decoration-color: #ccc; }
   .projectMoreButton:hover {
+    cursor: pointer;
     color: #92bed9;
     text-decoration: underline;
     text-decoration-color: inherit; }
@@ -477,7 +482,7 @@ header, footer {
   left: 17px;
   border-radius: 20px; }
 
-.screen {
+.screen, .bwdg {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -485,15 +490,18 @@ header, footer {
   margin-top: 25px;
   margin-bottom: 25px;
   margin-left: 3px; }
-  .screen img {
+  .screen img, .bwdg img {
     width: 100%;
     border-radius: 7px;
     object-fit: contain; }
   @media (min-width: 768px) {
-    .screen {
+    .screen, .bwdg {
       margin-top: 7px;
       margin-left: 20px;
       margin-bottom: 10px; } }
+
+.project3 {
+  display: none; }
 
 .footerContainer {
   align-items: baseline; }
@@ -520,9 +528,6 @@ header, footer {
 .aboutCaret, .projectCaret {
   padding-left: 5px;
   color: #c8dbe6; }
-
-.fa-caret-up {
-  color: transparent; }
 
 .hidden {
   display: none; }
