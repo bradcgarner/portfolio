@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box; }
+
+.row {
+  max-width: 100%;
+  padding-left: 2.083333%;
+  padding-right: 2.083333%;
+  margin: 0 auto 0 auto; }
+  @media only screen and (min-width: 640px) {
+    .row {
+      margin: 0 auto 2.083333% auto; } }
+
+.rowHeader {
+  margin-left: 3.1249995%;
+  margin-right: 3.1249995%; }
+
+.col {
+  float: left;
+  padding-left: 1.0416665%;
+  padding-right: 1.0416665%; }
+
+.col {
+  margin-bottom: 2.083333%; }
+  @media only screen and (min-width: 640px) {
+    .col {
+      margin-bottom: 0; } }
+
+.row::before, .row::after {
+  display: table;
+  content: ''; }
+.row::after {
+  clear: both; }
+
+footer {
+  border-top: 10px solid white; }
+
+.col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-12 {
+  width: 100%; }
+
+@media only screen and (min-width: 640px) {
+  .col-2 {
+    width: 16.6666%; }
+
+  .col-3 {
+    width: 25%; }
+
+  .col-4 {
+    width: 33.3333%; }
+
+  .col-5 {
+    width: 41.6666%; }
+
+  .col-6 {
+    width: 50%; }
+
+  .col-7 {
+    width: 58.3333%; }
+
+  .col-8 {
+    width: 66.6666%; }
+
+  .col-9 {
+    width: 75%; }
+
+  .col-10 {
+    width: 83.3333%; }
+
+  .col-12 {
+    width: 100%; } }
+
+/*# sourceMappingURL=columns-float-grid.css.map */

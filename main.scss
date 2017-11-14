@@ -602,7 +602,7 @@ header, footer {
   border-radius: 20px;
 }
 
-.screen, .bwdg {
+.screen {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -620,6 +620,47 @@ header, footer {
     margin-left: 20px;
     margin-bottom: 10px;
   }
+}
+
+.bwdgContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.bwdg {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 100%;
+    border-radius: 7px;
+    object-fit: contain;
+  }
+  margin-top: 25px;
+  margin-bottom: 25px;
+  width: 90%;  
+  @media (min-width: $portraitTablet) {
+    margin-top: 7px;
+    margin-bottom: 10px;
+  }
+  @media (min-width: $portraitPhoneWide) {
+    width: 85%
+  }
+  @media (min-width: $landscapePhone) {
+  }
+  @media (min-width: $portraitTablet) {
+    width: 80%;
+  }
+  @media (min-width: $landscapeTablet) {
+    width: 75%;
+  }
+  @media (min-width: $laptopPlus) {
+    width:70%;
+  }
+
 }
 
 .project3 {

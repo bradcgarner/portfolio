@@ -482,7 +482,7 @@ header, footer {
   left: 17px;
   border-radius: 20px; }
 
-.screen, .bwdg {
+.screen {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -490,15 +490,51 @@ header, footer {
   margin-top: 25px;
   margin-bottom: 25px;
   margin-left: 3px; }
-  .screen img, .bwdg img {
+  .screen img {
     width: 100%;
     border-radius: 7px;
     object-fit: contain; }
   @media (min-width: 768px) {
-    .screen, .bwdg {
+    .screen {
       margin-top: 7px;
       margin-left: 20px;
       margin-bottom: 10px; } }
+
+.bwdgContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.bwdg {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  width: 90%; }
+  .bwdg img {
+    width: 100%;
+    border-radius: 7px;
+    object-fit: contain; }
+  @media (min-width: 768px) {
+    .bwdg {
+      margin-top: 7px;
+      margin-bottom: 10px; } }
+  @media (min-width: 375px) {
+    .bwdg {
+      width: 85%; } }
+  @media (min-width: 768px) {
+    .bwdg {
+      width: 80%; } }
+  @media (min-width: 992px) {
+    .bwdg {
+      width: 75%; } }
+  @media (min-width: 1200px) {
+    .bwdg {
+      width: 70%; } }
 
 .project3 {
   display: none; }

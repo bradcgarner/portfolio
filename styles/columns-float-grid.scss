@@ -1,0 +1,81 @@
+// Grid measurements:
+//  .row max width = 1000px, with 20px gutters on either side, 
+//  so 1 row has 960px total to work with.
+//  Each full gutter = 20px. If we want 12 columns internally, we have 11 gutters internally.
+//  So 960 - (11 * 20) = 740px. (We don't need this number.)
+//  740px / 12 columns = 61.6666px per column. (We don't need this number.)
+//  Border each 61.6666px column with a half-gutter (10px) on each side.
+//  10px / 960px = 1.0416666% (see padding-left and padding-right below)
+$max-width: 100%;
+$outside-gutter-width: 2.083333%;
+$outside-gutter-normal-width: 10px;
+$col-gutter-width: ($outside-gutter-width/2);
+$row-header-gutter-width: ($outside-gutter-width + $col-gutter-width);
+$single-column-width: 640px;
+
+//without border-box, borders can throw off the entire grid
+* { box-sizing: border-box; }
+
+// ~~~~~~~~~~~~~~~~ Overall horizontal alignment ~~~~~~~~~~~~~~~~ 
+.row {
+  max-width: $max-width;
+  padding-left: ($outside-gutter-width);
+  padding-right: ($outside-gutter-width);
+  margin: 0 auto 0 auto;
+  @media only screen and (min-width: $single-column-width) {
+    margin: 0 auto $outside-gutter-width auto;
+  }
+}
+.rowHeader {
+  margin-left: $row-header-gutter-width;
+  margin-right: $row-header-gutter-width;
+}
+.col {
+  float: left;
+  padding-left: $col-gutter-width;
+  padding-right: $col-gutter-width;
+}
+
+// ~~~~~~~~~~~~~~~~ Mobile pseudo-Clearfix ~~~~~~~~~~~~~~~~ 
+.col {
+  //mobile pseudo-Clearfix
+  margin-bottom: $outside-gutter-width;
+  //remove mobile pseudo-Clearfix
+  @media only screen and (min-width: $single-column-width) {
+    margin-bottom: 0;
+  }
+}
+
+// ~~~~~~~~~~~~~~~~ Constant Clearfix ~~~~~~~~~~~~~~~~ 
+.row {
+  &::before, &::after {
+    display: table;
+    content: '';
+  }
+  &::after { 
+    clear: both;
+  }
+}
+footer {
+  border-top: $outside-gutter-normal-width solid white;
+}
+
+// ~~~~~~~~~~~~~~~~ Mobile "grid" ~~~~~~~~~~~~~~~~
+.col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-12 {
+  width: 100%; 
+}
+
+// ~~~~~~~~~~~~~~~~ Non-mobile grid ~~~~~~~~~~~~~~~~ 
+@media only screen and (min-width: $single-column-width) {
+  // col-2 = "take up 2 of 12 columns", not "divide the screen into 2 total columns", so 2/12 = 16.6666%
+  .col-2 { width: 16.6666%;  }
+  .col-3 { width: 25%;       }
+  .col-4 { width: 33.3333%;  }
+  .col-5 { width: 41.6666%;  }
+  .col-6 { width: 50%;       }
+  .col-7 { width: 58.3333%;  }
+  .col-8 { width: 66.6666%;  }
+  .col-9 { width: 75%;       }
+  .col-10 { width: 83.3333%; }
+  .col-12 { width: 100%;     }
+}
