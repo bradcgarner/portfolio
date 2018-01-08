@@ -353,17 +353,25 @@ header, footer {
     .aboutHeader:hover .nowrap .fa-caret-down {
       color: #5a9fc7; }
 
-.aboutDetailWrapper, .projectMoreWrapper {
+.aboutDetailWrapper, .moreWrapper {
   max-height: 500px; }
 
 .aboutDetail {
   color: #c8dbe6; }
 
-.aboutDetail, .projectMoreDetail {
-  padding: 5px;
+.aboutDetail, .moreDetail {
+  padding: 10px 5px;
   line-height: 1.3em;
   max-height: 500px;
   overflow: none; }
+  @media (min-width: 992px) {
+    .aboutDetail, .moreDetail {
+      font-size: 18px;
+      padding: 15px 5px;
+      line-height: 1.5em; } }
+
+.myStack {
+  line-height: 1.3em; }
 
 .projectsHeader {
   padding-top: 30px;
@@ -436,21 +444,21 @@ header, footer {
   font-size: 24px;
   margin-bottom: 15px; }
 
-.projectMoreButton {
+.moreButton {
   padding: 5px;
   font-size: 18px;
   margin-top: 15px;
   background-color: white;
   text-decoration-color: #ccc; }
-  .projectMoreButton:hover {
+  .moreButton:hover {
     cursor: pointer;
     color: #92bed9;
     text-decoration: underline;
     text-decoration-color: inherit; }
-    .projectMoreButton:hover .fa-caret-down {
+    .moreButton:hover .fa-caret-down {
       color: #92bed9; }
 
-.projectMoreDetail {
+.moreDetail {
   color: #0e3247; }
 
 .projectMainCaption {
@@ -546,9 +554,14 @@ header, footer {
   height: 15px;
   width: 100%; }
 
-.transition, .transitionContents, .collapsed, svg, .fa {
+.transition, .transitionContents, .collapsed {
   transition-property: all;
   transition-duration: 0.5s;
+  transition-timing-function: ease; }
+
+.svg, .fa {
+  transition-property: all;
+  transition-duration: 0.3s;
   transition-timing-function: ease; }
 
 .collapsed {

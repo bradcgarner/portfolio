@@ -103,7 +103,7 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient($deg, $start, $end); /* Standard syntax (must be last) */
 }
 
-$slide-speed: 1s;
+$slide-speed: 0.5s;
 @mixin slide {
 	-webkit-transition: $slide-speed;
 	-moz-transition: $slide-speed;
@@ -446,22 +446,26 @@ header, footer {
     }
   }
 }
-.aboutDetailWrapper, .projectMoreWrapper {
+.aboutDetailWrapper, .moreWrapper {
   max-height: 500px;
 }
 .aboutDetail {
   color: $accentLight;
 }
-.aboutDetail, .projectMoreDetail {
-  padding: 5px;
+.aboutDetail, .moreDetail {
+  padding: 10px 5px;
   line-height: 1.3em;
   max-height: 500px;
   overflow: none;
+  @media (min-width: $landscapeTablet) {
+    font-size: 18px;
+    padding: 15px 5px;
+    line-height: 1.5em;
+  }
 }
-
-
-// @@@@@@@@@@@@@@@@@@@@@@@@@@
-
+.myStack {
+  line-height: 1.3em;
+}
 
 // @@@@@@@@@@@@@@@@@@@@@@@@@@
 
@@ -545,11 +549,11 @@ header, footer {
   
 }
 
-.projectMoreContainer {
+.moreContainer {
 
 }
 
-.projectMoreButton{
+.moreButton{
   padding: 5px;
   font-size: 18px;
   margin-top: 15px;
@@ -566,7 +570,7 @@ header, footer {
     }
   }
 }
-.projectMoreDetail {
+.moreDetail {
   color: $projectMoreColor;
 }
 .projectMainCaption {
@@ -687,9 +691,16 @@ header, footer {
 // apply 'transition' class to anything else that should slide or change color with this transition
 
 $transitionSpeed: 0.5s;
-.transition, .transitionContents, .collapsed, svg, .fa { 
+$transitionSpeedFast: 0.3s;
+
+.transition, .transitionContents, .collapsed { 
   transition-property: all;
   transition-duration: $transitionSpeed;
+  transition-timing-function: ease;
+}
+.svg, .fa { 
+  transition-property: all;
+  transition-duration: $transitionSpeedFast;
   transition-timing-function: ease;
 }
 .collapsed {
@@ -708,9 +719,8 @@ $transitionSpeed: 0.5s;
   padding-left: 5px;
   color: $accentLight;
 }
-// .fa-caret-up {
-//   color: transparent;
-// }
+
+// @@@@@@@@@@@@@@@@@@@@ MISC BUT IMPORTANT @@@@@@@@@@@@@@@@@@
 
 .hidden {
   display: none;
