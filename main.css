@@ -440,6 +440,30 @@ header, footer {
       flex-direction: row;
       align-items: center; } }
 
+.projectContent4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+.project4ImageContainer {
+  width: 100%; }
+  @media (min-width: 768px) {
+    .project4ImageContainer {
+      width: 90%; } }
+  @media (min-width: 375px) {
+    .project4ImageContainer {
+      width: 80%; } }
+  @media (min-width: 768px) {
+    .project4ImageContainer {
+      width: 75%; } }
+  @media (min-width: 992px) {
+    .project4ImageContainer {
+      width: 70%; } }
+  @media (min-width: 1200px) {
+    .project4ImageContainer {
+      width: 60%; } }
+
 .projectTitle, .bigFont {
   font-size: 24px;
   margin-bottom: 15px; }

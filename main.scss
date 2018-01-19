@@ -542,6 +542,32 @@ header, footer {
     align-items: center;
   }
 }
+.projectContent4 {
+  display: flex;
+  flex-direction: column;  
+  align-items: center;
+  justify-content: center;
+}
+.project4ImageContainer {
+  width: 100%;
+  @media (min-width: $portraitTablet) {
+   width: 90%;
+  }
+  @media (min-width: $portraitPhoneWide) {
+    width: 80%
+  }
+  @media (min-width: $landscapePhone) {
+  }
+  @media (min-width: $portraitTablet) {
+    width: 75%;
+  }
+  @media (min-width: $landscapeTablet) {
+    width: 70%;
+  }
+  @media (min-width: $laptopPlus) {
+    width:60%;
+  }
+}
 
 .projectTitle, .bigFont { // name of project
   font-size: 24px;
