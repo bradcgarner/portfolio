@@ -532,14 +532,14 @@ header, footer {
       margin-left: 20px;
       margin-bottom: 10px; } }
 
-.bwdgContainer {
+.bwdgContainer, .wtcssContainer {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; }
 
-.bwdg {
+.bwdg, .wtcss {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -547,29 +547,62 @@ header, footer {
   margin-top: 25px;
   margin-bottom: 25px;
   width: 90%; }
-  .bwdg img {
+  .bwdg img, .wtcss img {
     width: 100%;
     border-radius: 7px;
     object-fit: contain; }
   @media (min-width: 768px) {
-    .bwdg {
+    .bwdg, .wtcss {
       margin-top: 7px;
       margin-bottom: 10px; } }
   @media (min-width: 375px) {
-    .bwdg {
+    .bwdg, .wtcss {
       width: 85%; } }
   @media (min-width: 768px) {
-    .bwdg {
+    .bwdg, .wtcss {
       width: 80%; } }
   @media (min-width: 992px) {
-    .bwdg {
+    .bwdg, .wtcss {
       width: 75%; } }
   @media (min-width: 1200px) {
-    .bwdg {
+    .bwdg, .wtcss {
       width: 70%; } }
 
 .project3 {
   display: none; }
+
+.linksBar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap; }
+
+.link {
+  height: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  margin: 10px 0;
+  background-color: #3e7696;
+  cursor: pointer; }
+  .link:hover {
+    background-color: #599cc5; }
+
+.link a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  height: 100%;
+  padding: 5px;
+  color: white; }
+  .link a:hover {
+    color: white; }
 
 .footerContainer {
   align-items: baseline; }

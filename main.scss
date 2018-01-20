@@ -652,14 +652,14 @@ header, footer {
   }
 }
 
-.bwdgContainer {
+.bwdgContainer, .wtcssContainer {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.bwdg {
+.bwdg, .wtcss {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -690,13 +690,51 @@ header, footer {
   @media (min-width: $laptopPlus) {
     width:70%;
   }
-
 }
 
 .project3 {
   display: none;
 }
 
+// @@@@@@@@@@@@@@@@@@@@@@@@@
+
+.linksBar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.link {
+  height: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  margin: 10px 0;
+  background-color: $linkHover;
+  // color: $white;
+  cursor: pointer;
+  &:hover {
+    background-color: $accent;
+    // color: $white;
+  }
+}
+.link a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  height: 100%;
+  padding: 5px;
+  color: $white;
+  &:hover {
+    color: $white;
+  }
+}
 // @@@@@@@@@@@@@@@@@@@@@@@@@
 
 
