@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+a:focus, a:hover {
+  font-style: italic; }
+
+body {
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  width: 100vw; }
+
+main, footer {
+  width: 100vw;
+  margin: 0 auto; }
+
+footer {
+  background-color: #f63;
+  color: white;
+  font-weight: white;
+  padding: 1em 0; }
+
+header {
+  left: 0;
+  width: 100vw; }
+  header .headerBanner {
+    width: 100%;
+    overflow: hidden; }
+    header .headerBanner h1 {
+      background-color: #f63;
+      padding-top: 20px;
+      padding-bottom: 10px;
+      text-align: center;
+      color: white;
+      letter-spacing: 2vw;
+      transform: scale(1.2, 1);
+      -webkit-transform: scale(1.2, 1); }
+      @media screen and (min-width: 350px) {
+        header .headerBanner h1 {
+          letter-spacing: 3vw; } }
+      @media screen and (min-width: 640px) {
+        header .headerBanner h1 {
+          letter-spacing: 4vw; } }
+
+.slicknav_menu {
+  display: block; }
+  @media screen and (min-width: 640px) {
+    .slicknav_menu {
+      display: none; } }
+
+.menu {
+  display: none;
+  width: 100%;
+  z-index: 2;
+  cursor: pointer;
+  color: white; }
+  @media screen and (min-width: 640px) {
+    .menu {
+      display: block; } }
+  .menu a {
+    font-style: normal;
+    text-decoration: none;
+    color: inherit; }
+  .menu li {
+    list-style-type: none;
+    margin: 0;
+    text-align: center;
+    font-weight: bold;
+    background-color: #f63;
+    z-index: 2;
+    padding: 1em 0; }
+  .menu a:focus, .menu a:hover, .menu .navEndLink:focus, .menu .navEndLink:hover {
+    color: yellow;
+    font-style: italic; }
+  .menu ul {
+    width: 100%; }
+    .menu ul::after {
+      content: "";
+      clear: both;
+      display: block; }
+    .menu ul li {
+      float: left;
+      display: block;
+      width: 16.66666666%;
+      position: relative;
+      z-index: 2; }
+      .menu ul li:hover > .navUl2 {
+        display: block; }
+      .menu ul li .navUl2Hide {
+        display: none; }
+      .menu ul li ul {
+        width: 100%;
+        display: none;
+        position: absolute;
+        top: 100%;
+        z-index: 2; }
+        .menu ul li ul li {
+          width: 100%;
+          float: none;
+          position: relative;
+          z-index: 2; }
+          .menu ul li ul li:hover > ul {
+            display: block; }
+          .menu ul li ul li ul {
+            display: none;
+            width: 100%;
+            position: absolute;
+            top: 0%;
+            left: 100%;
+            z-index: 2; }
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  z-index: 3; }
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    position: absolute;
+    width: 200%;
+    font-size: 75%;
+    background-color: rgba(0, 0, 0, 0.35);
+    color: white;
+    text-align: right;
+    padding: 5px;
+    border-radius: 15px 15px 0 15px;
+    bottom: 90%;
+    right: 100%;
+    z-index: 3; }
+  @media screen and (min-width: 640px) {
+    .tooltip:hover > .tooltiptext {
+      visibility: visible; } }
+
+main {
+  padding-top: 10px;
+  position: relative; }
+  main h1 {
+    padding: 15px; }
+
+section {
+  width: 100%;
+  z-index: -1; }
+  section:not(.mainShow) {
+    max-height: 50vh;
+    overflow: none; }
+
+.mainHideLeft {
+  position: absolute;
+  margin-left: -100%;
+  top: 10px;
+  max-height: 500px;
+  overflow: none; }
+
+.mainShow {
+  position: relative;
+  margin-left: 0;
+  -webkit-transition: 2.5s;
+  -moz-transition: 2.5s;
+  -ms-transition: 2.5s;
+  -o-transition: 2.5s;
+  transition: 2.5s; }
+
+.mainHideRight {
+  position: absolute;
+  margin-left: 100%;
+  top: 10px;
+  -webkit-transition: 2.5s;
+  -moz-transition: 2.5s;
+  -ms-transition: 2.5s;
+  -o-transition: 2.5s;
+  transition: 2.5s;
+  max-height: 500px;
+  overflow: none; }
+
+.rowHeader {
+  text-align: center; }
+
+.box {
+  height: 200px;
+  text-align: center;
+  padding-top: 30px; }
+
+.black {
+  background-color: black;
+  color: white; }
+
+.green {
+  background-color: green; }
+
+.orange {
+  background-color: orange; }
+
+.blue {
+  background-color: blue; }
+
+.dev {
+  background-color: none; }
+
+.devChallenge {
+  color: red; }
+
+.devLearn {
+  color: blue; }
+
+.devRow {
+  height: auto; }
+
+.devNotes, .devNotes li {
+  text-align: left; }
+  .devNotes ul, .devNotes li ul {
+    padding-left: 30px;
+    font-size: 90%;
+    margin-bottom: 15px; }
+
+.em {
+  font-style: italic;
+  text-decoration: underline; }
+
+/*# sourceMappingURL=main.css.map */

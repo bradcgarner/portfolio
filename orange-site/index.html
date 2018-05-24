@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Brad Garner</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="images/paw.ico">
+  	<link rel="stylesheet" href="styles/slicknav.css">
+	<link rel="stylesheet" href="main.css" type="text/css">
+	<link rel="stylesheet" href="styles/columns-float-grid.css" type="text/css"> 
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+  	<link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+</head>
+<body>
+<header role="banner">
+	<div class="headerBanner">
+		<h1>Brad Garner</h1>
+	</div>
+	<nav role="navigation" class="menu" onmouseover="showMenu()"><!--to restore menu after collapsing on click-->
+		<ul>
+			<li class="navParent navLi1">About
+				<ul class="navUl2">
+					<li class="navLi2 navEndLink" onclick="showDiv('mainThisSite')">This Site</li>
+					<li class="navLi2 navEndLink" onclick="showDiv('mainTechStory')">Tech Story</li>
+					<a href="./resume-filemaker"><li class="navLi2">Resum&eacute;</li></a>
+					<li class="navLi2 navEndLink" onclick="showDiv('mainHome')">At Home</li>
+					<li class="navLi2 navEndLink" onclick="showDiv('mainPassions')">Passions</li>
+					<li class="navLi2 navEndLink" onclick="showDiv('mainCoolStuff')">Cool Stuff</li>
+				</ul>
+			</li>
+			<li class="navParent navLi1">Work
+				<ul class="navUl2">
+					<li class="navLi2 navParent">Projects
+						<ul class="navUl3">
+							<a href="#" target="_blank"><li class="navLi3">Capstone 1</li></a>
+							<a href="#" target="_blank"><li class="navLi3">Capstone 2</li></a>
+							<a href="#" target="_blank"><li class="navLi3">Capstone 3</li></a>
+							<a href="#" target="_blank"><li class="navLi3">Capstone 4</li></a>
+							<a href="#" target="_blank"><li class="navLi3">Capstone 5</li></a>
+							<a href="#" target="_blank"><li class="navLi3">Freelance 1</li></a>
+							<a href="#" target="_blank"><li class="navLi3">Freelance 2</li></a>
+							<a href="#" target="_blank"><li class="navLi3">Freelance 3</li></a>
+							<a href="#" target="_blank"><li class="navLi3">Freelance 4</li></a>
+						</ul>
+					</li>
+					<li class="navLi2 navEndLink" onclick="showDiv('mainCSS')">CSS Images</li>
+					<li class="navLi2 navEndLink" onclick="showDiv('mainFM')">FileMaker</li>
+				</ul>
+			</li>
+			<li class="navParent navLi1">
+				<div class="tooltip">Deep Tracks
+					<span class="tooltiptext">cool things I did before moving into tech full-time</span>
+				</div>
+				<ul class="navUl2">
+					<li class="navLi2 navParent">Green Roofs
+						<ul class="navUl3">
+							<li class="navLi3 navEndLink" onclick="showDiv('mainGrPics')">Pics &amp; Links</li>
+							<li class="navLi3 navEndLink" onclick="showDiv('mainGrEc')">EcoCline</li>
+							<li class="navLi3 navEndLink" onclick="showDiv('mainGrRemix')">Remix</li>
+						</ul>
+					</li>
+					<li class="navLi2 navParent">Green Walls
+						<ul class="navUl3">
+							<li class="navLi3 navEndLink" onclick="showDiv('mainGwPics')">Pics &amp; Links</li>
+							<li class="navLi3 navEndLink" onclick="showDiv('mainBWDG')">Design Guide</li>
+						</ul>
+					</li>
+					<li class="navLi2 navParent">Landscape
+						<ul class="navUl3">
+							<li class="navLi3 navEndLink" onclick="showDiv('mainHistLandscape')">Historic</li>
+							<li class="navLi3 navEndLink" onclick="showDiv('mainLaQAQC')">LA QA/QC</li>
+							<li class="navLi3 navEndLink" onclick="showDiv('mainLaRemix')">Remix</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li class="navParent navLi1">Design
+				<ul class="navUl2">
+					<li class="navLi2 navEndLink" onclick="showDiv('mainPhilosophy')">Philosophy</li>
+					<li class="navLi2 navEndLink" onclick="showDiv('mainUrban')">Urban</li>
+					<li class="navLi2 navEndLink" onclick="showDiv('mainOrange')">
+						<span class="tooltip">Orange
+							<span class="tooltiptext">a color so great it deserves its own page</span>
+						</span>
+					</li>
+					<li class="navLi2 navEndLink" onclick="showDiv('mainEcology')">Ecology</li>
+					<li class="navLi2 navEndLink" onclick="showDiv('mainInspiration')">Inspiration</li>
+				</ul>
+			</li>
+			<li class="navParent navLi1">Resources
+				<ul class="navUl2">
+					<a href="#" target="_blank"><li class="navLi2">Link 1</li></a>
+					<a href="#" target="_blank"><li class="navLi2">Link 2</li></a>
+					<a href="#" target="_blank"><li class="navLi2">Link 3</li></a>
+					<a href="#" target="_blank"><li class="navLi2">Link 4</li></a>
+					<li class="navLi2 navEndLink" onclick="showDiv('mainResources')">More</li>
+				</ul>
+			</li>
+			<li class="navParent navLi1">Connect
+				<ul class="navUl2">
+					<a href="mailto:brad@bradgarner.com"><li class="navLi2">email</li></a>
+					<a href="#" target="_blank"><li class="navLi2">LinkedIn</li></a>
+					<a href="#" target="_blank"><li class="navLi2">GitHub</li></a>
+					<a href="#" target="_blank"><li class="navLi2">CodePen</li></a>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+</header>
+
+<!--main is what we'll refresh-->
+<main class="main">
+	<section class="mainShow mainLanding" role="main">
+		<h1 class="rowHeader">Main Landing</h1>
+		<!--cols on each row must add up to 12.  Beyond that, mix-and-match away!-->
+	    <div class="row customRow"> <!-- max 960 inside 1000 centered -->
+	      <div class="col col-3 customCol"> <!-- float left, proportional gutter (padding) -->
+	        <div class="box orange">3 columns</div>
+	      </div>
+	      <div class="col col-3 customCol">
+	        <div class="box blue">3 columns</div>
+	      </div>
+	      <div class="col col-3 customCol">
+	        <div class="box green">3 columns</div>
+	      </div>
+	      <div class="col col-3 customCol">
+	        <div class="box black">3 columns</div>
+	      </div>
+	    </div><!--end row-->
+
+		<div class="row customRow">
+	      <div class="col col-2 customCol">
+	        <div class="box orange">2 columns</div>
+	      </div>
+	      <div class="col col-7 customCol">
+	        <div class="box blue">7 columns</div>
+	      </div>
+	      <div class="col col-3 customCol">
+	        <div class="box green">3 columns</div>
+	      </div>
+	    </div><!--end row-->
+
+	    <div class="row customRow">
+	      <div class="col col-4 customCol">
+	        <div class="box orange">4 columns</div>
+	      </div>
+	      <div class="col col-4 customCol">
+	        <div class="box blue">4 columns</div>
+	      </div>
+	      <div class="col col-4 customCol">
+	        <div class="box green">4 columns</div>
+	      </div>
+	    </div><!--end row-->
+
+	    <div class="row customRow">
+	      <div class="col col-5 customCol">
+	        <div class="box orange">5 columns</div>
+	      </div>
+	      <div class="col col-3 customCol">
+	        <div class="box blue">3 columns</div>
+	      </div>
+	      <div class="col col-4 customCol">
+	        <div class="box green">4 columns</div>
+	      </div>
+	    </div><!--end row-->
+
+	    <div class="row customRow">
+	      <div class="col col-3 customCol">
+	        <div class="box orange">3 columns</div>
+	      </div>
+	      <div class="col col-9 customCol">
+	        <div class="box blue">9 columns</div>
+	      </div>
+	    </div><!--end row-->
+
+	    <div class="row customRow">
+	      <div class="col col-6 customCol">
+	        <div class="box orange">6 columns</div>
+	      </div>
+	      <div class="col col-6 customCol">
+	        <div class="box blue">6 columns</div>
+	      </div>
+	    </div><!--end row-->
+
+	    <div class="row customRow">
+	      <div class="col col-8 customCol">
+	        <div class="box orange">8 columns</div>
+	      </div>
+	      <div class="col col-4 customCol">
+	        <div class="box blue">4 columns</div>
+	      </div>
+	    </div><!--end row-->
+
+	    <div class="row customRow">
+	      <div class="col col-12 customCol">
+	        <div class="box orange">12 columns</div>
+	      </div>
+	    </div><!--end row-->
+	</section><!--end mainLanding-->
+
+<!-- ~~~~~~~~ ABOUT ~~~~~~~~~~~ -->
+
+	<section class="mainHideLeft mainThisSite">
+		<h1 class="rowHeader">This Site</h1>
+		<div class="row">
+			<div class="col col-12">
+				<p>This is a temporary area where I'm keeping notes about development of this site (for myself, and for sharing).</p>
+			</div>
+		</div>
+		<div class="row devRow">
+	      <div class="col col-6 devNotes">
+	        <div class="dev">
+	        	<p>Key:</p>
+	        	<ul>
+		        	<li>General Description / Accomplishment</li>
+		        	<li class="devLearn">Learning Point</li>
+		        	<li class="devChallenge">Not Happy With / Problem</li>
+	        	</ul>
+	        	<br><br>
+	        	<p>So Far:</p>
+	        	<ul>
+	        		<li>Used what I already learned about RWD, and recycled a 12-column exercise for my RWD grid
+	        			<ul>
+	        				<li>Updated that grid to allow 2-column thru 12-column (no 1, no 11)</li>
+	        				<li>Migrated all CSS for the grid to Sass</li>
+	        				<li>I think I have this in a format where I could easily recycle it.</li>
+	        				<li class="devChallenge">I'd be interested in writing the HTML via JS. E.g. using very simple indents or minimal number of characters, writing the HTML with the appropriate element nesting and classes.  I could easily script FileMaker to do that.  I wonder if there are widgets out there that already do this, with a few parameters entered like class names?</li>
+	        				<li>The class <span class="em">customCol</span> and <span class="em">customRow</span> are just placeholder classes for now.  Those are to indicate that this is where a custom class would go, if the column or row would be styled specifically, in addition to the columns-float-grid.scss styling.</li>
+	        				<li>The <span class="em">box</span> classes are clearly placeholders, and are no indication of the final content.  Only indication that the grid is working.</li>
+	        			</ul>
+	        		</li>
+	        		<li>Started with a menu from a prior HTML5 class
+	        			<ul>
+	        				<li>Updated/expanded the menu</li>
+	        				<li>Added additional classes to the menu for greater flexibility in manipulating via JS and CSS (originally, the menu had no classes, and any manipulation had to be done via multi-tier parent>child relationships</li>
+	        				<li>Migrated styling of the menu to Sass</li>
+	        				<li class="devLearn">Learned the long and hard way about when to use &amp; with <span class="em">&amp;:hover</span> and <span class="em">&amp;::before</span>, etc. Similarly had to remove a lot of <span class="em">></span> from the menu when I migrated to Sass.</li>
+	        				<li class="devLearn">Had a LOT of challenges getting the menu to go away after clicking (since this is a single-page site).  Ended up scripting this as on-click, change 1st tier of menu to a display:none class. Then when we want to display again, there is another script that actives on-hover over the parent <span class="em">ul</span>.  <span class="devChallenge">The scripting I did seems to be fast, but seems roundabout. Suggestions?</span></li>
+	        				<li class="devLearn">I spent a huge amount of time trying to get all the menu <span class="em">lis</span> to hover consistently (some are scripted onclick, some are anchor tags).  I finally wrapped the anchor tags around <span class="em">lis</span> and voilla! It works. <span class="devChallenge">But is there a better way?</span></li>
+	        				<li class="devLearn">Learned that one of the first things to check with positioning is that all parents are positioned. (I made the mistake of skipping a few childen at one point, and then things get weird.)</li>
+	        			</ul>
+	        		</li>
+	        	</ul>
+	        </div> <!--end box-->
+	     </div> <!--end col-->
+	     <div class="col col-6 devNotes">
+	        <div class="dev">
+	        	<ul>
+	        		<li>Scripted non-link menu actions to allow a single-page site
+	        			<ul>	
+	        				<li class="devLearn">Strengthened positioning skills</li>
+	        				<li>Tried to get all divs to animate in from the left, always.  But now I actually like how the previously-viewed divs come in from the right</li>
+	        				<li class="devLearn">I added a timeout in JS to allow the left-to-right script to complete before moving the section back to the left, so that scrolling is ALWAYS left-to-right. Only exception: clicking in rapid-fire it will return from the right (which I think is just fine). <span class="devChallenge">Better ideas?</span></li>
+	        				<li class="devLearn">Learned that animation can be done by changing classes and having a destination point only. Was trying to do this with @keyframes, which required me to know where the div was (left or right) then move it. Turned out to be way too complicated, and not necessary.</li>
+	        				<li class="devChallenge">...I am guessing I'll look back at this and laugh after learning React...</li>
+	        				<li class="devLearn">Learned a lot about using classes to affect display properties. Tried several animation techniques: learned that there are many, and simple sometimes is best.</li>
+	        			</ul>
+	        		</li>
+	        		<li>Installed <span class="em">slicknav</span> to use for the mobile menu.
+	        			<ul>
+	        				<li>Styled <span class="em">slicknav.scss</span> to match my <span class="em">main.scss</span> file. This turned out to be pretty easy.</li>
+	        				<li class="devLearn">Had a LOT of challenges getting the mobile menu to collapse upon click (which I assume is because this is a single-page site). Searched online, and found several people with the same problem, but NONE of the dozen or so suggestions was helpful.  Ended up manually debugging this by clicking the mobile menu multiple times to figure out how slicknav was doing it.  Basically slicknav is changing classes (similar to what I was doing).</li>
+	        				<li class="devChallenge">I tried understanding whether there was a script already in slicknav that I could run to do this. No luck.</li>
+	        				<li class="devChallenge">I was unsuccessful at getting the ENTIRE slicknav menu to collapse, but I can live with that for now.</li>
+	        				<li class="devLearn">Learned a lot about using classes to affect display properties.</li>
+	        			</ul>
+	        		</li>
+	        		<li>Styled the banner
+	        			<ul>
+	        				<li>Within <span class="em">header>h1</span>, explored <span class="em">letter-spacing</span> and <span class="em">transform: scale</span>.  (I like wide header fonts, though this is not exactly Frank Lloyd Wright).</li>
+	        				<li class="devChallenge">I had to wrap <span class="em">header>h1</span> in a div that I gave class <span class="em">headerBanner</span> with property <span class="em">overflow:none</span>.  Without this, the <span class="em">h1</span> was spilling off to the right. I could not figure out why, and I tried to debug that a lot.  Adding <span class="em">overflow:none</span> to the header as a whole, means the menu doesn't work (it "needs" to overflow), and adding it to the body seems to prevent the body from scrolling (as if the body is limited to the dimensions of <span class="em">size: cover</span>).  Suggestions?? This one really bugged me.</li>
+	        			</ul>
+	        		</li>
+	        	</ul>
+	        </div><!--end box-->
+	    </div><!--end row-->
+	</section><!--end mainThisSite-->
+
+	<section class="mainHideLeft mainPassions">
+		<h1 class="rowHeader">Passions</h1>
+		<div class="row customRow">
+	      <div class="col col-2 customCol">
+	        <div class="box orange">2 columns</div>
+	      </div>
+	      <div class="col col-7 customCol">
+	        <div class="box blue">7 columns</div>
+	      </div>
+	      <div class="col col-3 customCol">
+	        <div class="box green">3 columns</div>
+	      </div>
+	    </div><!--end row-->
+	</section><!--end mainPassions-->
+
+	<section class="mainHideLeft mainHome">
+		<h1 class="rowHeader">Home &amp; Family</h1>
+		<div class="row customRow">
+	      <div class="col col-4 customCol">
+	        <div class="box orange">4 columns</div>
+	      </div>
+	      <div class="col col-5 customCol">
+	        <div class="box blue">5 columns</div>
+	      </div>
+	      <div class="col col-3 customCol">
+	        <div class="box green">3 columns</div>
+	      </div>
+	    </div><!--end row-->
+	</section><!--end mainHome-->
+
+	<section class="mainHideLeft mainCoolStuff">
+		<h1 class="rowHeader">Cool Stuff</h1>
+		<div class="row customRow">
+	      <div class="col col-3 customCol">
+	        <div class="box orange">3 columns</div>
+	      </div>
+	      <div class="col col-4 customCol">
+	        <div class="box blue">4 columns</div>
+	      </div>
+	      <div class="col col-5 customCol">
+	        <div class="box green">5 columns</div>
+	      </div>
+	    </div><!--end row-->
+	</section><!--end mainCoolStuff-->
+
+	<section class="mainHideLeft mainTechStory">
+		<h1 class="rowHeader">My Technology Story</h1>
+		<div class="row customRow">
+	      <div class="col col-5 customCol">
+	        <div class="box orange">5 columns</div>
+	      </div>
+	      <div class="col col-3 customCol">
+	        <div class="box blue">3 columns</div>
+	      </div>
+	      <div class="col col-4 customCol">
+	        <div class="box green">4 columns</div>
+	      </div>
+	    </div><!--end row-->
+	</section><!--end mainTechStory-->
+
+<!-- ~~~~~~~~ WORK ~~~~~~~~~~~ -->
+
+	<section class="mainHideLeft mainCSS">
+		<h1 class="rowHeader">For The Love of CSS!</h1>
+		<div class="row customRow">
+	      <div class="col col-4 customCol">
+	        <div class="box orange">4 columns</div>
+	      </div>
+	      <div class="col col-4 customCol">
+	        <div class="box blue">4 columns</div>
+	      </div>
+	      <div class="col col-4 customCol">
+	        <div class="box green">4 columns</div>
+	      </div>
+	    </div><!--end row-->
+	</section><!--end mainCSS-->
+
+	<section class="mainHideLeft mainFM">
+		<h1 class="rowHeader">FileMaker</h1>
+		<div class="row customRow">
+	      <div class="col col-6 customCol">
+	        <div class="box orange">6 columns</div>
+	      </div>
+	      <div class="col col-3 customCol">
+	        <div class="box blue">3 columns</div>
+	      </div>
+	      <div class="col col-3 customCol">
+	        <div class="box green">3 columns</div>
+	      </div>
+	    </div><!--end row-->
+	</section><!--end mainFM-->
+
+<!-- ~~~~~~~~ DEEP TRACKS ~~~~~~~~~~~ -->
+
+	<section class="mainHideLeft mainGrPics">
+		<h1 class="rowHeader">Green Roof Pics and Links</h1>
+		<div class="row customRow">
+	      <div class="col col-3 customCol">
+	        <div class="box orange">3 columns</div>
+	      </div>
+	      <div class="col col-9 customCol">
+	        <div class="box blue">9 columns</div>
+	      </div>
+	    </div><!--end row-->
+	</section><!--end mainGrPics-->
+
+	<section class="mainHideLeft mainGrEc">
+		<h1 class="rowHeader">EcoCline High Performance Green Roof</h1>
+		<div class="row customRow">
+	      <div class="col col-4 customCol">
+	        <div class="box orange">4 columns</div>
+	      </div>
+	      <div class="col col-8 customCol">
+	        <div class="box blue">8 columns</div>
+	      </div>
+	    </div><!--end row-->
+	</section><!--end mainGrEc-->
+
+	<section class="mainHideLeft mainGrRemix">
+		<h1 class="rowHeader">Remix: Green Roof Possibilities</h1>
+		<div class="row customRow">
+	      <div class="col col-5 customCol">
+	        <div class="box orange">5 columns</div>
+	      </div>
+	      <div class="col col-7 customCol">
+	        <div class="box blue">7 columns</div>
+	      </div>
+	    </div><!--end row-->
+	</section><!--end mainGrRemix-->
+	<footer role="contentinfo">
+
+	<section class="mainHideLeft mainGwPics">
+		<h1 class="rowHeader">Green Wall Pics &amp; Links</h1>
+		<div class="row customRow">
+	      <div class="col col-7 customCol">
+	        <div class="box orange">7 columns</div>
+	      </div>
+	      <div class="col col-5 customCol">
+	        <div class="box blue">5 columns</div>
+	      </div>
+	    </div><!--end row-->
+	</section><!--end mainGwPics-->
+
+	<section class="mainHideLeft mainBWDG">
+		<h1 class="rowHeader">BioWall Design Guide</h1>
+		<div class="row customRow">
+	      <div class="col col-4 customCol">
+	        <div class="box orange">4 columns</div>
+	      </div>
+	      <div class="col col-8 customCol">
+	        <div class="box blue">8 columns</div>
+	      </div>
+	    </div><!--end row-->
+	</section><!--end mainBWDG-->
+
+	<section class="mainHideLeft mainHistLandscape">
+		<h1 class="rowHeader">Historic Landscapes</h1>
+		<div class="row customRow">
+	      <div class="col col-10 customCol">
+	        <div class="box orange">10 columns</div>
+	      </div>
+	      <div class="col col-2 customCol">
+	        <div class="box blue">2 columns</div>
+	      </div>
+	    </div><!--end row-->
+	</section><!--end mainHistLandscape-->
+
+	<section class="mainHideLeft mainLaQAQC">
+		<h1 class="rowHeader">Landscape Architectural Quality Assurance / Quality Control</h1>
+		<div class="row customRow">
+	      <div class="col col-10 customCol">
+	        <div class="box orange">10 columns</div>
+	      </div>
+	      <div class="col col-2 customCol">
+	        <div class="box blue">2 columns</div>
+	      </div>
+	    </div><!--end row-->
+	</section><!--end mainLaQAQC-->
+
+	<section class="mainHideLeft mainLaRemix">
+		<h1 class="rowHeader">Remix: Landscape Architectural Ideas</h1>
+		<div class="row customRow">
+	      <div class="col col-10 customCol">
+	        <div class="box orange">10 columns</div>
+	      </div>
+	      <div class="col col-2 customCol">
+	        <div class="box blue">2 columns</div>
+	      </div>
+	    </div><!--end row-->
+	</section><!--end mainLaRemix-->
+
+<!-- ~~~~~~~~ DESIGN ~~~~~~~~~~~ -->
+
+	<section class="mainHideLeft mainPhilosophy">
+		<h1 class="rowHeader">Design Philosophy</h1>
+		<div class="row customRow">
+	      <div class="col col-4 customCol">
+	        <div class="box orange">4 columns</div>
+	      </div>
+	      <div class="col col-8 customCol">
+	        <div class="box blue">8 columns</div>
+	      </div>
+	    </div><!--end row-->
+	</section><!--end mainPhilosophy-->
+
+	<section class="mainHideLeft mainUrban">
+		<h1 class="rowHeader">Urban Design</h1>
+		<div class="row customRow">
+	      <div class="col col-5 customCol">
+	        <div class="box orange">5 columns</div>
+	      </div>
+	      <div class="col col-7 customCol">
+	        <div class="box blue">7 columns</div>
+	      </div>
+	    </div><!--end row-->
+	</section><!--end mainUrban-->
+
+	<section class="mainHideLeft mainOrange">
+		<h1 class="rowHeader">Orange</h1>
+		<div class="row customRow">
+	      <div class="col col-6 customCol">
+	        <div class="box orange">6 columns</div>
+	      </div>
+	      <div class="col col-6 customCol">
+	        <div class="box blue">6 columns</div>
+	      </div>
+	    </div><!--end row-->
+	</section><!--end mainOrange-->
+
+	<section class="mainHideLeft mainEcology">
+		<h1 class="rowHeader">Ecological Design</h1>
+		<div class="row customRow">
+	      <div class="col col-7 customCol">
+	        <div class="box orange">7 columns</div>
+	      </div>
+	      <div class="col col-5 customCol">
+	        <div class="box blue">5 columns</div>
+	      </div>
+	    </div><!--end row-->
+	</section><!--end mainEcology-->
+
+	<section class="mainHideLeft mainInspiration">
+		<h1 class="rowHeader">Design Inspiration</h1>
+		<div class="row customRow">
+	      <div class="col col-4 customCol">
+	        <div class="box orange">4 columns</div>
+	      </div>
+	      <div class="col col-8 customCol">
+	        <div class="box blue">8 columns</div>
+	      </div>
+	    </div><!--end row-->
+	</section><!--end mainInspiration-->
+
+	<!-- ~~~~~~~~ RESOURCES ~~~~~~~~~~~ -->
+
+	<section class="mainHideLeft mainResources">
+		<h1 class="rowHeader">Resources</h1>
+		<div class="row customRow">
+	      <div class="col col-4 customCol">
+	        <div class="box orange">4 columns</div>
+	      </div>
+	      <div class="col col-8 customCol">
+	        <div class="box blue">8 columns</div>
+	      </div>
+	    </div><!--end row-->
+	</section><!--end mainResources-->
+
+</main>
+
+<footer role="contentinfo">
+	<p>This is a footer. It is fixed.</p>
+</footer>
+<script src="main.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="scripts/jquery.slicknav.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.menu').slicknav();
+	});
+</script>
+</body>
+</html>
