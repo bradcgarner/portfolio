@@ -258,18 +258,21 @@
           <i class="fa fa-caret-up aboutCaret aboutCaret1" aria-hidden="true"></i></span>
         </h2>   
         <div class="aboutDetailWrapper aboutDetailWrapper1 transition collapsedAbout">
-          <p class='aboutDetail transitionContents'>I like solving problems, organizing things, and the challenge of making the complex appear simple. I’m drawn to the web’s infinite scalability and interconnectedness that fits in your pocket.</p>
-          <p class='aboutDetail transitionContents'>My skills and interests span the client- and server-sides.  I enjoy writing API documentation just as much as I enjoy building React apps.</p>
+          <p class='aboutDetail transitionContents'>I like solving problems, organizing things, and the challenge of making the complex appear simple. I like getting stuff done!  I’m drawn to the web’s infinite scalability and interconnectedness that fits in your pocket.</p>
+          <p class='aboutDetail transitionContents'>I enjoy the client communication and team coordination the come with full-stack development. The exposure to all aspects of an application allow me to assess user feedback and determine whether the appropriate adjustment is in the UI, the API, the database, or some function along the way.</p>
         </div>
       
         <h2 class='aboutHeader transition' onclick='showDetail("about",2)'>
-          How I got into web <span class="nowrap">development 
+          My <span class="nowrap">background 
           <i class="fa fa-caret-down aboutCaret aboutCaret2" aria-hidden="true"></i></span>        
         </h2>
         <div class="aboutDetailWrapper aboutDetailWrapper2 collapsed hidden transition collapsedAbout">
-          <p class='aboutDetail transitionContents'>I took some Pascal classes (yeah, this was the early 90s) in college, and I enjoyed it so much I ended up with a CS minor.</p>
-          <p class='aboutDetail transitionContents'>While pursuing my first passion, landscape architecture, I continued programming by building things like construction cost calculators and full ERPs, primarily using FileMaker for rapid deployment, since programming wasn't my primary role.</p>
-          <p class='aboutDetail transitionContents'>But then I got off the sidelines of technology, started taking night classes in HTML, CSS, JS, and PHP, I then enrolled in Thinkful's Engineering Immersion program.  I am now very excited to start a new career in web development!</p>
+          <p class='aboutDetail transitionContents'>In short, my professional background is "a mutt".  I consider that a feature, not a bug.</p>
+          <p class='aboutDetail transitionContents'>Career #1 was in landscape architecture, approriate since I am passionate about the environment. I was always in the technical minority of that field, preferring specification writing, forensic landscape architecture (both related to litigation and historic research), and construction management.</p>
+          <p class='aboutDetail transitionContents'>Career #1.5 was in green roofs and green walls. I was the team lead for development and regulatory approval of an industry-changing green roof product, <a href='http://ecocline.net' target='_blank'>EcoCline</a>.</p>
+          <p class='aboutDetail transitionContents'>All the while, I was building applications.  I have a minor in Pascal (yeah, from the early 90s!), but for rapid deployment without much of a programming background, I used <a href='http://www.filemaker.com/' target='_blank'>FileMaker</a> to build out construction cost estimators, stormwater modelers, and full ERPs.</p>
+          <p class='aboutDetail transitionContents'>Eventually I embraced the nerd within, took some night classes, and completed <a href='http://thinkful.com' target='_blank'>Thinkful's</a> Engineering Immersion program to start career #2 (3?) in tech.</p>
+          <p class='aboutDetail transitionContents'>Oddly, but fortunately, this led back to my prior industry.  I am now building stormwater modeling software, leveraging a wide range of skills and continuing to follow my passion for urban development in greater harmony with natural systems.</p>
         </div>
       
         <h2 class='aboutHeader transition' onclick='showDetail("about",3)'>
@@ -282,16 +285,17 @@
           <p class='aboutDetail transitionContents myStack'>noSQL: Mongo with Mongoose</p>
           <p class='aboutDetail transitionContents myStack'>SQL: Postgres with Knex</p>
           <p class='aboutDetail transitionContents'>Python3</p>          
-          <p class='aboutDetail transitionContents myStack'>I am interested in learning more.  I would like to pick up Angular and Java soon.</p>          
+          <p class='aboutDetail transitionContents myStack'>* list above subject to change due to lifelong learning...</p>          
         </div>
 
         <h2 class='aboutHeader transition' onclick='showDetail("about",4)'>
-          Other <span class="nowrap">thoughts 
+          <span class="nowrap">Philosphy 
           <i class="fa fa-caret-down aboutCaret aboutCaret4" aria-hidden="true"></i></span>
         </h2>
         <div class="aboutDetailWrapper aboutDetailWrapper4 transition hidden collapsedAbout collapsed">
-          <p class='aboutDetail transitionContents'>The web was built to share freely, collaborate openly, and interact in real time; these attributes draw me to the web. The web should allow us to know more, interact better, and be healthier than any other time in human history.</p>
-          <p class='aboutDetail transitionContents'>Though the web is exciting and fun, it's not a toy, but something that comes with great responsibility. We web developers should guard again misuses such as weaponization of information, development of bad habits, and division. I am eager to play an important role in our most powerful communication medium.</p>  
+          <p class='aboutDetail transitionContents'>The web was built to share freely, collaborate openly, and interact in real time. The web <em>should</em> allow us to know more, interact better, and be healthier than any other time in human history.</p>
+          <p class='aboutDetail transitionContents'>Though the web is exciting and fun, it is our most powerful communication medium, and something that comes with great responsibility. We web developers should guard again misuses such as weaponization of information, development of bad habits, and division.</p>  
+          <p class='aboutDetail transitionContents'>Technology is just a means to an end. One of the best software skills is people skills: empathizing with users and being highly skilled at using technology to meet users' needs.</p>
         </div>
       
       </div> <!-- end aboutContent -->
@@ -300,13 +304,187 @@
 
   <h2 class="projectsHeader">PROJECTS</h2>  
 
+  <article class='projectContainer project5'>
+    <div class="projectContentColumn">
+      <h1 class='projectTitle'>Environmental Monitoring</h1>
+        <div class="stormwatchContainer">
+          <div class='floating stormwatch'>
+            <img id='monitoring-image' src="./images/monitoring.png">
+          </div><!--end floating-->
+        </div><!-- end stormwatchContainer-->
+    </div>
+      
+    <div class="moreContainer moreContainer5 transition">
+        
+        <p class="moreButton transition" onclick='showDetail("project",51)'>
+          Overview
+          <i class="fa fa-caret-down projectCaret projectCaret51" aria-hidden="true"></i>
+        </p>
+        <div class="moreWrapper moreWrapper51 transition">
+          <p class="moreDetail transitionContents">Internal application for collecting, managing, and analyzing data from an IoT sensor network, and R&amp;D trials.  Data sources include outdoor green roof platforms, a weather station, and a rain simulator.</p>  
+          <p class="moreDetail transitionContents">Application allows for fast, consistent, accurate testing and monitoring of multiple trials.</p> 
+        </div>  
+    </div><!-- end moreContainer--> 
+
+    <div class="stackContainer stackContainer5">
+      <div class="stackCenter">
+    
+            <div class="stackIcon"> 
+                <img src="./images/es6-rocks.png">
+                <div class="stackToolTip">
+                  <h4>JavaScript / ES6</h4>
+                  <p>ES6 features used include default parameters, template literals, destructuring, arrow functions, promises, let &amp; const for clean, stable code.</p>
+                </div>
+              </div>
+            
+            <div class="stackIcon"> 
+              <img src="./images/node-hex.png">
+              <div class="stackToolTip">
+                <h4>Node</h4>
+                <p>Node was used for rapid deployment and extremely fast run-time.</p>
+              </div>
+            </div>
+            
+            <div class="stackIcon"> 
+              <img src="./images/expressjs.png">
+              <div class="stackToolTip">
+                <h4>Express</h4>
+                <p>Server-side MVC organization and API endpoint management.</p>
+              </div>
+            </div>
+  
+            <div class="stackIcon"> 
+              <img src="./images/swaggerhub.png">
+              <div class="stackToolTip">
+                <h4>SwaggerHub</h4>
+                <p>I am a big fan of clear, accurate API documentation even for the smallest application.</a></p>
+              </div>
+            </div>
+            
+            <div class="stackIcon"> 
+              <img src="./images/jwt-clean.svg">
+              <div class="stackToolTip">
+                <h4>JavaScript Web Tokens</h4>
+                <p>Upon login, the user's JWT is saved in the Redux store and in the browser's local storage for access to all protected endpoints, and authenticated via custom middleware.</p>
+              </div>
+            </div>
+                    
+            <div class="stackIcon"> 
+              <img src="./images/postgres-elephant-clean.png">
+              <div class="stackToolTip">
+                <h4>PostgresQL</h4>
+                <p>I chose SQL for primary data persistence to allow for easy and extensive joins between tables, which is important in our analyses.  I prefer Postgres due to quality documentation, specification extemely close to SQL standard, and open-source portability.</p>
+              </div>
+            </div>
+
+            <div class="stackIcon"> 
+              <img src="./images/mongo-sheild-clean.png">
+              <div class="stackToolTip">
+                <h4>Mongo noSQL Database</h4>
+                <p>Though PostgresQL is the main database, I also used a Mongo noSQL database for miscellaneous data that does not require frequent searching or joins.</p>
+              </div>
+            </div>
+
+            <div class="stackIcon"> 
+              <img src="./images/logdna.png">
+              <div class="stackToolTip">
+                <h4>logDNA</h4>
+                <p>Easy, customizable, searchable logging software.</p>
+              </div>
+            </div>
+
+            <div class="stackIcon"> 
+              <img src="./images/chartjs.svg">
+              <div class="stackToolTip">
+                <h4>Chart JS</h4>
+                <p>Easy tool for creating compelling - and animated - graphs. Critical for understanding our data.</p>
+              </div>
+            </div>
+              
+            <div class="stackIcon"> 
+              <img src="./images/mocha-hex.png">
+              <div class="stackToolTip">
+                <h4>Mocha</h4>
+                <p>Server-side test suite uses the Mocha framework and Chai assertion library.</p>
+              </div>
+            </div>
+              
+            <div class="stackIcon">
+              <img src="./images/chai-hex.png">
+              <div class="stackToolTip">
+                <h4>Chai</h4>
+                <p>Server-side test suite uses the Mocha framework and Chai assertion library.</p>
+              </div>
+            </div>
+    
+            <div class="stackIcon"> 
+              <img src="./images/html5-sheild.png">
+              <div class="stackToolTip">
+                <h4>HTLM5</h4>
+                <p>New HTML5 features used include semantic elements, new form features, and placeholder text.</p>
+              </div>
+            </div>    
+              
+            <div class="stackIcon"> 
+              <img src="./images/firebase.png">
+              <div class="stackToolTip">
+                <h4>Firebase</h4>
+                <p>Secure file storage and file access authentication.</p>
+              </div>
+            </div>
+                  
+            <div class="stackIcon"> 
+              <img src="./images/react.svg">
+              <div class="stackToolTip">
+                <h4>React</h4>
+                <p>The client-side framework is React, used for its grace and speed of DOM manipulation.</p>
+              </div>
+            </div>
+            
+            <div class="stackIcon"> 
+              <img src="./images/redux.png">
+              <div class="stackToolTip">
+                <h4>Redux</h4>
+                <p>This started as React without Redux, but with growth, I added Redux to simplify state manipulation.</p>
+              </div>
+            </div>
+            
+            <div class="stackIcon"> 
+              <img src="./images/jest.png">
+              <div class="stackToolTip">
+                <h4>Jest</h4>
+                <p>Testing assertion library used with Enzyme.</p>
+              </div>
+            </div>
+                
+            <div class="stackIcon"> 
+              <img src="./images/enzyme.png">
+              <div class="stackToolTip">
+                <h4>Enzyme</h4>
+                <p>Client-side (React) testing.</p>
+              </div>
+            </div>
+            
+            <div class="stackIcon"> 
+                <img src="./images/css3-sheild.png">
+                <div class="stackToolTip">
+                  <h4>CSS3</h4>
+                  <p>New CSS3 features used include Flexbox, border-radius, and box-shadow.  LOTS of Flexbox!!!</p>
+                </div>
+              </div>
+            
+        </div>
+      </div><!--END STACK CONTAINER-->
+
+  </article>
+
   <article class='projectContainer project4'>
     <div class='projectContentColumn'>
-      <h1 class='projectTitle'>CauseWay</h1>
+      <h1 class='projectTitle'>CauseWay (Academic Project)</h1>
       <div class='projectContent4'>
         <div class='floating project4ImageContainer'>
           <a href="https://causeway-app.netlify.com/" target="_blank">
-            <img src="./images/causeway.gif">
+            <img id='causeway-image' src="./images/causeway.png">
           </a>
         </div>
       </div><!--end floating-->
@@ -367,7 +545,7 @@
           <p class="moreDetail transitionContents">This would also be a good project to convert to React Native.</p>
         </div>
   
-      </div><!-- end moreContainer-->
+    </div><!-- end moreContainer-->
             
 
     <div class="stackContainer stackContainer4">
@@ -385,7 +563,7 @@
             <img src="./images/node-hex.png">
             <div class="stackToolTip">
               <h4>Node</h4>
-              <p>We used Node for the server, but the extensive computations needed for managing SQL join tables might be more performant using something like Python.</p>
+              <p>Node was used for rapid deployment and extremely fast run-time.</p>
             </div>
           </div>
           
@@ -552,7 +730,7 @@
   <article class='projectContainer project1'>
 
     <div class="projectContentColumn">
-      <h1 class='projectTitle'>Code To Go</h1>
+      <h1 class='projectTitle'>Code To Go (Academic Project)</h1>
       <div class="projectContentRow projectContent1">
         <div class='phone'>
           <div class='phoneShadow'></div>
@@ -566,7 +744,7 @@
    
         <div class="screen">
           <a href="https://codetogo-io.herokuapp.com/" target="_blank">
-            <img src="./images/quiz-screen.gif">
+            <img id='code-to-go-image' src="./images/codetogo.png">
           </a>
         </div>
       </div><!-- end projectContentRow -->
@@ -805,7 +983,7 @@
       <div class="bwdgContainer">
         <div class='floating bwdg'>
           <a href="http://furbishco.com/biowall-vegetated-wall/biowall-design-guide/" target="_blank">
-            <img src="./images/BWDG-reduced.gif">
+            <img id='bwdg-image' src="./images/bwdg.png">
           </a>
         </div><!--end floating-->
       </div>
@@ -881,37 +1059,6 @@
     </div><!--END STACK CONTAINER-->
 
   </article><!--end project2-->
-
-
-  <article class='projectContainer project5'>
-    <div class="projectContentColumn">
-      <h1 class='projectTitle'>What The CSS?!</h1>
-        <div class="wtcssContainer">
-          <div class='floating wtcss'>
-            <a href="http://whatthecss.com/" target="_blank">
-              <img src="./images/WTCSS.png">
-            </a>
-          </div><!--end floating-->
-        </div><!-- end wtcssContainer-->
-        <div class='linksBar'>
-          <div class='link'>
-            <a href="http://whatthecss.com/" target="_blank">Sign Up!</a>
-          </div>        
-        </div><!--end linksBar-->
-      </div>
-      <div class="moreContainer moreContainer5 transition">
-        
-        <p class="moreButton transition" onclick='showDetail("project",51)'>
-          Overview
-          <i class="fa fa-caret-down projectCaret projectCaret11" aria-hidden="true"></i>
-        </p>
-        <div class="moreWrapper moreWrapper51 transition hidden collapsed">
-          <p class="moreDetail transitionContents">I am a member of the 4-person team who are producing, developing, and managing What The CSS?!, a program to take your CSS from 0 to 60 in 30 [days].</p>  
-          <p class="moreDetail transitionContents">CSS can confuse and frustrate developers. At first, I found positioning extremely challenging, but persisted, and now I'm writing the positioning curriculum. CSS can be a lot of fun, if you know the tools.</p> 
-          <p class="moreDetail transitionContents">Regardless of your skill level, consider signing up. We'll have a fun challenge for you every day for a month.</p> 
-        </div>  
-      </div><!-- end moreContainer--> 
-    </article>
 
   <article class='projectContainer project3'>
     <div class='projectContentColumn'>
@@ -1166,7 +1313,7 @@
 
   <div class="projectContainer moreSoon">
     <h2 class="projectsHeader">MORE SOON!</h2>  
-    <p class="moreSoon">It's January 2018, and I'm actively building my portfolio. Check back soon for more interesting projects.</p>
+    <p class="moreSoon">This was last updated in May 2018.  I'll try to keep this site updated with my latest work.</p>
   </div>
 
 </main>
@@ -1404,6 +1551,11 @@
 
 </footer>
 <script>
+
+  document.getElementById('monitoring-image').setAttribute('src', './images/monitoring.gif');
+  document.getElementById('causeway-image').setAttribute('src', './images/causeway.gif');
+  document.getElementById('code-to-go-image').setAttribute('src', './images/quiz-screen.gif');
+  document.getElementById('bwdg-image').setAttribute('src', './images/BWDG-reduced.gif');
   // simple vanilla JS script to hide and show divs, because I didn't want to import jQuery for this one action
 
   const STORE = {
