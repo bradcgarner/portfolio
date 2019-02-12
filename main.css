@@ -649,3 +649,61 @@ header, footer {
   white-space: nowrap; }
 
 /*# sourceMappingURL=main.css.map */
+
+.liveProjectTitle {
+}
+.liveParagraph.liveProjectExtra {
+  margin-bottom: 15px;
+
+}
+.liveContainer {
+  display: flex;
+  margin-top: 40px;
+  flex-direction: column;
+}
+@media (min-width: 800px){
+  .liveContainer {
+    flex-direction: row;
+  }
+}
+.livePreview {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  flex-shrink: 0;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.liveImageContainer {
+  display: flex;
+  width: 100%;
+  height: 157px;
+  overflow: hidden;
+}
+.liveImage {
+  width: 100%;
+  object-fit: contain;
+}
+.liveTitle {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.liveText {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 800px){
+  .liveText {
+    padding-left: 25px;
+  }
+}
+
+.liveParagraph {
+  line-height: 130%;
+  margin-bottom: 10px;
+}
+.attribution {
+  font-size: 80%;
+  font-style: italic;
+}

@@ -267,7 +267,7 @@
           <i class="fa fa-caret-down aboutCaret aboutCaret2" aria-hidden="true"></i></span>        
         </h2>
         <div class="aboutDetailWrapper aboutDetailWrapper2 collapsed hidden transition collapsedAbout">
-          <p class='aboutDetail transitionContents'>In short, my professional background is "a mutt".  I consider that a feature, not a bug.</p>
+          <p class='aboutDetail transitionContents'>In short, my professional background is "a mutt".  That's a feature, not a bug.</p>
           <p class='aboutDetail transitionContents'>Career #1 was in landscape architecture, approriate since I am passionate about the environment. I was always in the technical minority of that field, preferring specification writing, forensic landscape architecture (both related to litigation and historic research), and construction management.</p>
           <p class='aboutDetail transitionContents'>Career #1.5 was in green roofs and green walls. I was the team lead for development and regulatory approval of an industry-changing green roof product, <a href='http://ecocline.net' target='_blank'>EcoCline</a>.</p>
           <p class='aboutDetail transitionContents'>All the while, I was building applications.  I have a minor in Pascal (yeah, from the early 90s!), but for rapid deployment without much of a programming background, I used <a href='http://www.filemaker.com/' target='_blank'>FileMaker</a> to build out construction cost estimators, stormwater modelers, and full ERPs.</p>
@@ -280,11 +280,11 @@
           <i class="fa fa-caret-down aboutCaret aboutCaret3" aria-hidden="true"></i></span>
         </h2>
         <div class="aboutDetailWrapper aboutDetailWrapper3 transition hidden collapsedAbout collapsed">
-          <p class='aboutDetail transitionContents'>JavaScript: vanilla, Node, React, Redux</p>
-          <p class='aboutDetail transitionContents myStack'>HTML and CSS, often using SASS/SCSS</p>
+          <p class='aboutDetail transitionContents myStack'>JavaScript: vanilla, Node, React, Redux, Next.js</p>
+          <p class='aboutDetail transitionContents myStack'>HTML and CSS, sometimes SASS/SCSS</p>
           <p class='aboutDetail transitionContents myStack'>noSQL: Mongo with Mongoose</p>
-          <p class='aboutDetail transitionContents myStack'>SQL: Postgres with Knex</p>
-          <p class='aboutDetail transitionContents'>Python3</p>          
+          <p class='aboutDetail transitionContents myStack'>SQL: Postgres</p>
+          <p class='aboutDetail transitionContents myStack'>Pakbus (Modbus)</p>          
           <p class='aboutDetail transitionContents myStack'>* list above subject to change due to lifelong learning...</p>          
         </div>
 
@@ -304,6 +304,110 @@
 
   <h2 class="projectsHeader">PROJECTS</h2>  
 
+  <article class='projectContainer project6'>
+    <h1 class='projectTitle liveProjectTitle'>Current Projects</h1>
+    <p class='liveParagraph liveProjectExtra'>Each of the "thumbnail" projects immediately below is best viewed live. Click the links!</p>
+
+    <div class='liveContainer'>
+      <div class='livePreview'>
+        <div class='liveImageContainer'>
+          <img class='liveImage' src='./images/purple-roof.png' alt='purple-roof.com featured image'/>
+        </div>
+        <h3 class='liveTitle'><a href='https://www.purple-roof.com' target='_blank'>purple-roof.com</a></h3>
+      </div>
+      <div class='liveText'>
+        <p class='liveParagraph'>Website for Purple-Roof.  React.js with Next.js for server-side rendering.  This was my first project using Next.js, and I love it! I particularly like the modularity of components using of Next's styled-jsx.</p>
+        <p class='liveParagraph'>While building this site I started reading Sarah Drasner's <a href='https://www.amazon.com/SVG-Animations-Implementations-Responsive-Animation/dp/1491939702' target='_blank'>book on SVG animations</a>. SVGs are fun, fast, and powerful, and I expect to continue to study these and try new things.</p>
+      </div>
+    </div>
+
+    <div class='liveContainer'>
+      <div class='livePreview'>
+        <div class='liveImageContainer'>
+          <img class='liveImage' src='https://fs.buttercms.com/resize=width:300/ujEmO4yTs26WyZOuuVOe' alt='purple-roof.com featured image'/>
+        </div>
+        <h3 class='liveTitle'><a href='https://www.purple-roof.com/model' target='_blank'>modeling</a></h3>
+      </div>
+      <div class='liveText'>
+        <p class='liveParagraph'>Beta version of green roof modeler. Though a very small area of the Purple-Roof site, this project will likely be my major area of focus for the near future.</p>
+        <p class='liveParagraph'>User selects a location, Node server fetches weather data for that location, analyzes hydrologic and horticultural performance of 40 different green roof profiles over that time period, and sends the front end all 40 models.  UI allows toggling between the models.</p>
+        <p class='liveParagraph'>This project is nascent.  What is built is solid, but needs to grow.  I am eager to grow it!</p>
+      </div>
+    </div>
+
+    <div class='liveContainer'>
+      <div class='livePreview'>
+        <div class='liveImageContainer'>
+          <img class='liveImage' src='images/purple-roof-blog.png' alt='purple-roof.com featured image'/>
+        </div>
+        <h3 class='liveTitle'><a href='https://www.purple-roof.com/blog' target='_blank'>Purple-Roof blog</a></h3>
+      </div>
+      <div class='liveText'>
+        <p class='liveParagraph'>A major feature of the Purple-Roof site is its blog. I chose Butter CMS for ease of integration with a React app. Butter also eases management of SEO metadata.</p>
+        <p class='liveParagraph'>I wanted the primary navigation to be graphic, not text-based, and the team had recently developed the quadrant diagram. This project was one of my first attempts at splitting an SVG into multiple React components, then activating those components.</p>
+        </div>
+    </div>
+
+    <div class='liveContainer'>
+      <div class='livePreview'>
+        <div class='liveImageContainer'>
+          <img class='liveImage' src='./images/green-roof-diagnostics.png' alt='greenroofdiagnostics.com featured image'/>
+        </div>
+        <h3 class='liveTitle'><a href='https://www.greenroofdiagnostics.com' target='_blank'>greenroofdiagnostics.com</a></h3>
+      </div>
+      <div class='liveText'>
+        <p class='liveParagraph'>Website for Green Roof Diagnostics. Same technologies as Purple-Roof site (React and Next.js).</p>
+        <p class='liveParagraph'>We originally designed this site as a static single-page site using almost no JS. Then Vanilla JS for repetitive elements. Then Next.js.  Clean code and modularity is important for flexibility since sometimes you never know what you'll build when you start!</p>
+      </div>
+    </div>
+
+    <div class='liveContainer'>
+      <div class='livePreview'>
+        <div class='liveImageContainer'>
+          <img class='liveImage' src='https://fs.buttercms.com/resize=width:300/NAQcuySHRWKqssWLHTeO' alt='greenroofdiagnostics.com featured image'/>
+        </div>
+        <h3 class='liveTitle'><a href='https://www.greenroofdiagnostics.com/monitoring' target='_blank'>monitoring</a></h3>
+      </div>
+      <div class='liveText'>
+        <p class='liveParagraph'>This page shows the public-facing portion of Green Roof Diagnostic's environmental monitoring (the full monitoring application is StormWatch, below).</p>
+        <p class='liveParagraph'>This project was my first attempt at create React components as Node modules published on NPM. This allows me to maintain only one monitoring application, and deploy it with variable configurations to multiple apps.</p>
+      </div>
+    </div>
+
+    <div class='liveContainer'>
+        <div class='livePreview'>
+          <div class='liveImageContainer'>
+            <img class='liveImage' src='./images/graph-data-points.png' alt='Locomotive'/>
+          </div>
+          <h3 class='liveTitle'><a href='https://www.npmjs.com/package/react-chart-js-preprocessor' target='_blank'>graphing</a></h3>
+        </div>
+        <div class='liveText'>
+          <p class='liveParagraph'>The monitoring project (above) requires graphing and data visualization of a wide range of tests and experiments. We at Green Roof Diagnostics never know what we'll need to graph.</p>
+          <p class='liveParagraph'>I like chart.js and react-chart-js, but they require more configuration than is reasonable for a dynamic project. So I built a preprocessor to manage this for me.</p>
+          <p class='liveParagraph'>The preprocessor requires the data to be formatted as an array of objects, and each object key should be pre-defined. This aligns perfectly with a normal SQL database setup, so that's no problem.</p>
+          <p class='liveParagraph'>The preprocessor creates selectors for the data, manages Y-axes, allows X-axis shifts, allows users to save pre-set configurations, and more.</p>
+          <p class='liveParagraph'>This NPM module is not publicly documented yet, but it could be a great asset for similarly complex projects.</p>
+          <p class='liveParagraph'>Use this <a href='https://www.greenroofdiagnostics.com/monitoring#monitoring-search-console' target='_blank'>here</a> or watch it <a href='https://www.youtube.com/watch?time_continue=3&v=Fhg8DiRxGGw' target='_blank'>here</a>.</p>
+        </div>
+      </div>
+
+    <div class='liveContainer'>
+        <div class='livePreview'>
+          <div class='liveImageContainer'>
+            <img class='liveImage' src='./images/train.png' alt='Locomotive'/>
+          </div>
+          <h3 class='liveTitle'><a href='https://www.npmjs.com/package/conjunction-junction' target='_blank'>conjunction-junction</a></h3>
+        </div>
+        <div class='liveText'>
+          <p class='liveParagraph'>My work in environmental monitoring led to the need for a wide variety of functions that I could not find elsewhere on NPM. So I started this Node module to begin collecting functions that I use all the time.</p>
+          <p class='liveParagraph'>Initially this focused on date/time handling, later multiple complex object handling functions, and now unit conversions, including some odd and stormwater-specific conversions.</p>
+          <p class='liveParagraph'>I have not had time to publicly document (anyone want to help?) so I assume no-one else is using it. I use this library in at least 8 different repos that I work on daily.</p>
+          <p class='attribution'>Photo by Wikipedia user <a href="https://en.wikipedia.org/wiki/User:Slambo" class="extiw" title="en:User:Slambo">Slambo</a> on <a class="external text" href="http://en.wikipedia.org">en.wikipedia</a> (same as <a href="//commons.wikimedia.org/wiki/User:Slambo" title="User:Slambo">Slambo</a> here) - Photo by Sean Lamb (<a href="//commons.wikimedia.org/wiki/User:Slambo" title="User:Slambo">Slambo</a>), <a href="https://creativecommons.org/licenses/by-sa/2.0" title="Creative Commons Attribution-Share Alike 2.0">CC BY-SA 2.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=1067287">Link</a>. Edits limited to cropping.</p>
+        </div>
+      </div>
+
+  </article>
+
   <article class='projectContainer project5'>
     <div class="projectContentColumn">
       <h1 class='projectTitle'>Environmental Monitoring</h1>
@@ -321,8 +425,9 @@
           <i class="fa fa-caret-down projectCaret projectCaret51" aria-hidden="true"></i>
         </p>
         <div class="moreWrapper moreWrapper51 transition">
-          <p class="moreDetail transitionContents">Internal application for collecting, managing, and analyzing data from an IoT sensor network, and R&amp;D trials.  Data sources include outdoor green roof platforms, a weather station, and a rain simulator.</p>  
+          <p class="moreDetail transitionContents">StormWatch: Internal application for collecting, managing, and analyzing data from an IoT sensor network, and R&amp;D trials.  Data sources include outdoor green roof platforms, a weather station, and a rain simulator.</p>  
           <p class="moreDetail transitionContents">Application allows for fast, consistent, accurate testing and monitoring of multiple trials.</p> 
+          <p class="moreDetail transitionContents">One of the core requirements of this application is data integrity. We've got nearly 100 sensors, most of which need to have near 100% up-time. The app includes extensive monitoring of data consistency, varying alarm levels, and the ability to patch inconsistent data when redundant data sources are available.</p>
         </div>  
     </div><!-- end moreContainer--> 
 
@@ -1313,7 +1418,7 @@
 
   <div class="projectContainer moreSoon">
     <h2 class="projectsHeader">MORE SOON!</h2>  
-    <p class="moreSoon">This was last updated in May 2018.  I'll try to keep this site updated with my latest work.</p>
+    <p class="moreSoon">This was last updated in February 2019.  I'll try to keep this site updated with my latest work.</p>
   </div>
 
 </main>
